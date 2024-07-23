@@ -1,0 +1,114 @@
+html,
+body,
+#root {
+  height: 100%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: #f0f0f0;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  /* background-color: rgb(210, 229, 210); */
+  background-color: white;
+  text-align: center;
+}
+
+.header img {
+  width: 60px;
+  height: 60px;
+}
+
+.message-box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  flex-grow: 1;
+  padding: 16px;
+}
+
+.user-message {
+  display: flex;
+  justify-content: right;
+}
+
+.system-message {
+  display: flex;
+  justify-content: left;
+}
+
+.message {
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.user-message .message {
+  background-color: #7f56d9;
+}
+
+.system-message .message {
+  background-color: white;
+  color: black;
+}
+
+.inputbox {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background-color: white;
+}
+
+.inputbox textarea {
+  flex-grow: 1;
+  align-content: space-between;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 16px;
+  border: 1px solid #d0d0d0;
+  min-height: 24px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.inputbox button {
+  border: 1px solid #d0d0d0;
+  background-color: white;
+  width: 60px;
+  flex-shrink: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: 25px;
+  height: 25px;
+  border: 5px solid #000;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
